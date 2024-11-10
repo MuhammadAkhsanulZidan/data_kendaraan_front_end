@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('http://192.168.0.104:5000/api/kendaraan')
+    fetch('https://datakendaraanapi-production.up.railway.app/api/kendaraan')
         .then(response => response.json())
         .then(data => {
             const kendaraanList = data.response_data;
