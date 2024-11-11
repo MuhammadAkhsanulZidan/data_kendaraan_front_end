@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Data Kendaraan</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Link to your custom CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+</head>
+
+<body>
+    <div class="m-5">
+        <h3 class="mb-4">Aplikasi Data Kendaraan</h3>
+
+        <div class="card mb-4" style="background-color: #fce4d6;">
+            <div class="card-body">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="search-regnum" class="font-weight-bold">Search by Registration Number</label>
+                        <input type="text" id="search-regnum" class="form-control"
+                            placeholder="Enter registration number">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="search-owner" class="font-weight-bold">Search by Owner Name</label>
+                        <input type="text" id="search-owner" class="form-control" placeholder="Enter owner name">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end mb-4">
+            <button id="search-button" class="btn btn-primary px-5 py-2">Search</button>
+            <a href="/kendaraan/add" class="btn btn-primary ml-2 px-5 py-2 ">Add</a>
+        </div>
+
+
+        <!-- Table -->
+        <div class="table-responsive">
+            <table id="kendaraan-table" class="table table-bordered">
+                <thead style="background-color: #ADD8E6;">
+                    <tr>
+                        <th>No</th>
+                        <th>Registration Number</th>
+                        <th>Owner Name</th>
+                        <th>Brand</th>
+                        <th>Production Year</th>
+                        <th>Cylinder Capacity</th>
+                        <th>Color</th>
+                        <th>Fuel</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap and custom scripts -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../scripts/controllers/listKendaraanController.js"></script> <!-- Link to the controller -->
+    <script src="../scripts/services/kendaraanService.js"></script> <!-- Link to the service -->
+</body>
+
+</html>

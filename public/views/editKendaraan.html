@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Kendaraan</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="m-5">
+        <h5>Edit Kendaraan</h5>
+        <form id="edit-kendaraan-form">
+            <div class="d-flex">
+                <div class="flex-column w-50 p-2">
+                    <label for="registration_number">No. Registrasi Kendaraan</label>
+                    <input type="text" id="registration_number" class="form-control mb-3"
+                        placeholder="Registration Number" required>
+                    <label for="owner_name">Nama Pemilik</label>
+                    <input type="text" id="owner_name" class="form-control mb-3" placeholder="Owner Name" required>
+                    <label for="brand">Merk Kendaraan</label>
+                    <input type="text" id="brand" class="form-control mb-3" placeholder="Brand" required>
+                    <label for="address">Alamat Pemilik Kendaraan</label>
+                    <textarea id="address" class="form-control mb-3" placeholder="Owner Address" rows="4"></textarea>
+                </div>
+                <div class="flex-column w-50 p-2">
+                    <label for="production_year">Tahun Pembuatan</label>
+                    <input type="number" id="production_year" class="form-control mb-3" maxlength="4" placeholder="Production Year"
+                        required>
+                    <label for="cilinder_capacity">Kapasitas Silinder</label>
+                    <input type="number" id="cilinder_capacity" class="form-control mb-3"
+                        placeholder="Cylinder Capacity" required>
+                    <label for="color">Warna Kendaraan</label>
+                    <select id="color" class="form-control mb-3" required>
+                        <option value="Merah">Merah</option>
+                        <option value="Hitam">Hitam</option>
+                        <option value="Biru">Biru</option>
+                        <option value="Abu-Abu">Abu-Abu</option>
+                    </select>
+                    <label for="fuel">Bahan Bakar</label>
+                    <input type="text" id="fuel" class="form-control mb-3" placeholder="Fuel" required>
+                </div>
+            </div>
+            <div class="pl-2 d-flex mt-3">
+                <button type="submit" class="btn btn-primary px-5 py-2">Simpan</button>
+                <button type="" class="ml-3 btn btn-secondary px-5 py-2">Kembali</button>
+            </div>
+        </form>
+    </div>
+    <script src="../scripts/controllers/editKendaraanController.js"></script>
+    <script src="../scripts/services/kendaraanService.js"></script>
+</body>
+</html>
