@@ -1,5 +1,5 @@
 class KendaraanService {
-    static baseURL = "http://localhost:5000/api/kendaraan";
+    static baseURL = "https://datakendaraanapi-production.up.railway.app/api/kendaraan";
     static fetchKendaraanData(callback, filters = {}) {
         $.ajax({
             url: `${this.baseURL}`,

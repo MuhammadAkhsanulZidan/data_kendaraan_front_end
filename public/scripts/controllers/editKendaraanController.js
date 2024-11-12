@@ -30,7 +30,7 @@ class EditKendaraanController {
             };
             KendaraanService.updateKendaraan(kendaraanData, (response) => {
                 alert(response.message);
-                window.location.href = '/kendaraan';
+                window.location.href = '../../views/listKendaraan.html';
             });
         });
     }
