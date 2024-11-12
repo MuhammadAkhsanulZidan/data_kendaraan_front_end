@@ -13,7 +13,7 @@ class EditKendaraanController {
             $('#brand').val(kendaraan.brand);
             $('#production_year').val(kendaraan.production_year);
             $('#cilinder_capacity').val(kendaraan.cilinder_capacity);
-            $('#color').val(kendaraan.color_id);
+            $('#color_id').val(kendaraan.color_id);
             $('#fuel').val(kendaraan.fuel);
         });
 
@@ -25,7 +25,7 @@ class EditKendaraanController {
                 brand: $('#brand').val(),
                 production_year: $('#production_year').val(),
                 cilinder_capacity: $('#cilinder_capacity').val(),
-                color: $('#color').val(),
+                color: $('#color_id').val(),
                 fuel: $('#fuel').val(),
             };
             KendaraanService.updateKendaraan(kendaraanData, (response) => {

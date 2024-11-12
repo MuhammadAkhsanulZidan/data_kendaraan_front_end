@@ -13,7 +13,7 @@ class AddKendaraanController {
                 brand: $('#brand').val(),
                 production_year: $('#production_year').val(),
                 cilinder_capacity: $('#cilinder_capacity').val(),
-                color: $('#color').val(),
+                color: $('#color_id').val(),
                 fuel: $('#fuel').val(),
             };
             KendaraanService.addKendaraan(kendaraanData, (response) => {

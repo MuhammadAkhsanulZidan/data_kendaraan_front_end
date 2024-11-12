@@ -13,8 +13,12 @@ class DetailKendaraanController {
             $('#brand').val(kendaraan.brand);
             $('#production_year').val(kendaraan.production_year);
             $('#cilinder_capacity').val(kendaraan.cilinder_capacity);
-            $('#color').val(kendaraan.color_id);
+            $('#color_id').val(kendaraan.color_id);
             $('#fuel').val(kendaraan.fuel);
+        });
+
+        $('.edit-button').on('click', (event) => {
+            window.location.href = `../../views/editKendaraan.html?id=${id}`;
         });
     }
 }
