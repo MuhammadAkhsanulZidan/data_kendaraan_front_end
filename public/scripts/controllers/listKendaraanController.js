@@ -88,7 +88,7 @@ class HomeController {
             // Confirm deletion
             if (confirm("Are you sure you want to delete this kendaraan?")) {
                 KendaraanService.deleteKendaraan(id, (response) => {
-                    alert(response.message);
+                    alert("Berhasil dihapus");
                     // Optionally, refresh the page or remove the deleted row from the table
                     location.reload(); // or use a function to remove the row dynamically
                 });

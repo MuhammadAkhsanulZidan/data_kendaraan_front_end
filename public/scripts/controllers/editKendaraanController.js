@@ -29,7 +29,7 @@ class EditKendaraanController {
                 fuel: $('#fuel').val(),
             };
             KendaraanService.updateKendaraan(kendaraanData, (response) => {
-                alert(response.message);
+                alert("Berhasil diedit");
                 window.location.href = '../../views/listKendaraan.html';
             });
         });

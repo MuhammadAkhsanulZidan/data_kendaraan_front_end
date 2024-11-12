@@ -17,7 +17,7 @@ class AddKendaraanController {
                 fuel: $('#fuel').val(),
             };
             KendaraanService.addKendaraan(kendaraanData, (response) => {
-                alert(response.message);
+                alert("Berhasil ditambahkan");
                 window.location.href = '../../views/listKendaraan.html';
             });
         });
