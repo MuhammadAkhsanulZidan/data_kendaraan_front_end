@@ -7,15 +7,14 @@ class DetailKendaraanController {
     initialize() {
         const kendaraanId = new URLSearchParams(window.location.search).get('id');
         KendaraanService.getKendaraanById(kendaraanId, (kendaraan) => {
-            this.detailsContainer.html(`
-                <p><strong>Registration Number:</strong> ${kendaraan.registration_number}</p>
-                <p><strong>Owner Name:</strong> ${kendaraan.owner_name}</p>
-                <p><strong>Brand:</strong> ${kendaraan.brand}</p>
-                <p><strong>Production Year:</strong> ${kendaraan.production_year}</p>
-                <p><strong>Cylinder Capacity:</strong> ${kendaraan.cilinder_capacity}</p>
-                <p><strong>Color:</strong> ${kendaraan.color_id}</p>
-                <p><strong>Fuel:</strong> ${kendaraan.fuel}</p>
-            `);
+            $('#kendaraan_id').val(kendaraan.id);
+            $('#registration_number').val(kendaraan.registration_number);
+            $('#owner_name').val(kendaraan.owner_name);
+            $('#brand').val(kendaraan.brand);
+            $('#production_year').val(kendaraan.production_year);
+            $('#cilinder_capacity').val(kendaraan.cilinder_capacity);
+            $('#color').val(kendaraan.color_id);
+            $('#fuel').val(kendaraan.fuel);
         });
     }
 }
