@@ -1,9 +1,20 @@
 {
     "rewrites": [
-      { "source": "/", "destination": "public/views/listKendaraan.html" },
-      { "source": "/new", "destination": "public/views/addKendaraan.html" },
-      { "source": "/detail", "destination": "public/views/detailKendaraan.html" },
-      { "source": "/edit", "destination": "public/views/editKendaraan.html" }
+        {
+            "source": "/",
+            "destination": "public/views/listKendaraan.html"
+        },
+        {
+            "source": "/new",
+            "destination": "/public/views/addKendaraan.html"
+        },
+        {
+            "source": "/detail",
+            "destination": "public/views/detailKendaraan.html"
+        },
+        {
+            "source": "/edit",
+            "destination": "public/views/editKendaraan.html"
+        }
     ]
-  }
-  
+}
