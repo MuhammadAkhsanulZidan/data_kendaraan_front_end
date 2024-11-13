@@ -18,7 +18,7 @@ class AddKendaraanController {
             };
             KendaraanService.addKendaraan(kendaraanData, (response) => {
                 alert("Berhasil ditambahkan");
-                window.location.href = '../../views/listKendaraan.html';
+                window.location.href = '../../kendaraan/';
             });
         });
     }

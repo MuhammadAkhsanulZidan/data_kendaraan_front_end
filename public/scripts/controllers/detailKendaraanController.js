@@ -18,7 +18,7 @@ class DetailKendaraanController {
         });
 
         $('.edit-button').on('click', (event) => {
-            window.location.href = `../../views/editKendaraan.html?id=${id}`;
+            window.location.href = `../../kendaraan/edit/?id=${kendaraanId}`;
         });
     }
 }

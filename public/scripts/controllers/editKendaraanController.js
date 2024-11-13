@@ -30,7 +30,7 @@ class EditKendaraanController {
             };
             KendaraanService.updateKendaraan(kendaraanData, (response) => {
                 alert("Berhasil diedit");
-                window.location.href = '../../views/listKendaraan.html';
+                window.location.href = '../../kendaraan/';
             });
         });
     }
