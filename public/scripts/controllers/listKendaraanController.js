@@ -75,12 +75,12 @@ class HomeController {
 
         $('.detail-button').on('click', (event) => {
             const id = $(event.currentTarget).data('id');
-            window.location.href = `../../views/detailKendaraan.html?id=${id}`;
+            window.location.href = `../../kendaraan/detail/?id=${id}`;
         });
 
         $('.edit-button').on('click', (event) => {
             const id = $(event.currentTarget).data('id');
-            window.location.href = `../../views/editKendaraan.html?id=${id}`;
+            window.location.href = `../../kendaraan/edit/?id=${id}`;
         });
 
         $('.delete-button').on('click', (event) => {
