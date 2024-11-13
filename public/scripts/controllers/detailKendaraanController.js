@@ -19,6 +19,7 @@ class DetailKendaraanController {
 
         $('.edit-button').on('click', (event) => {
             window.location.href = `../../kendaraan/edit/?id=${kendaraanId}`;
+            
         });
     }
 }
