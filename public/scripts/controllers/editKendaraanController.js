@@ -20,6 +20,13 @@ class EditKendaraanController {
 
         this.form.on('submit', (event) => {
             event.preventDefault();
+            const productionYear = $('#production_year').val();
+            
+            // Validate that the production year is 4 digits
+            if (productionYear.length !== 4 || isNaN(productionYear)) {
+                alert('Tahun Pembuatan harus 4 digit!');
+                return; 
+            }
             const kendaraanData = {
                 registration_number: $('#registration_number').val(),
                 owner_name: $('#owner_name').val(),
