@@ -20,8 +20,9 @@ class AddKendaraanController {
             }
 
             //should be replaced by current date
-            if(productionYear>=2024){
+            if(productionYear>2024){
                 alert('Tahun pembuatan tidak boleh lebih dari current year');
+                return;
             }
             
             // Collect form data
