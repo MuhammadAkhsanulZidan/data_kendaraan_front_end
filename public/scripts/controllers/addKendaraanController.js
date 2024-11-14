@@ -22,7 +22,7 @@ class AddKendaraanController {
 
             //should be replaced by current date
             // Date.now.arguments.
-            if(productionYear>currentYear){
+            if(Number(productionYear)>Number(currentYear)){
                 alert('Tahun pembuatan tidak boleh lebih dari current year');
                 return;
             }
