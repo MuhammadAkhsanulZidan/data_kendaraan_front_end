@@ -26,6 +26,7 @@ class AddKendaraanController {
                 cilinder_capacity: $('#cilinder_capacity').val(),
                 color_id: $('#color_id').val(),
                 fuel: $('#fuel').val(),
+                owner_address: $('#owner_address').val(),
             };
 
             // Call the service to add kendaraan

@@ -15,6 +15,7 @@ class DetailKendaraanController {
             $('#cilinder_capacity').val(kendaraan.cilinder_capacity);
             $('#color_id').val(kendaraan.color_id);
             $('#fuel').val(kendaraan.fuel);
+            $('#owner_address').val(kendaraan.owner_address);
         });
 
         $('.edit-button').on('click', (event) => {

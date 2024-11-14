@@ -15,6 +15,7 @@ class EditKendaraanController {
             $('#cilinder_capacity').val(kendaraan.cilinder_capacity);
             $('#color_id').val(kendaraan.color_id);
             $('#fuel').val(kendaraan.fuel);
+            $('#owner_address').val(kendaraan.owner_address);
         });
 
         this.form.on('submit', (event) => {
@@ -27,6 +28,7 @@ class EditKendaraanController {
                 cilinder_capacity: $('#cilinder_capacity').val(),
                 color_id: $('#color_id').val(),
                 fuel: $('#fuel').val(),
+                owner_address: $('#owner_address').val(),
             };
             KendaraanService.updateKendaraan(kendaraanData, (response) => {
                 alert("Berhasil diedit");
