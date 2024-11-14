@@ -19,9 +19,10 @@ class AddKendaraanController {
                 return; 
             }
 
-            // if(productionYear>=document.){
-            //     alert('Tahun pembuatan tidak boleh lebih dari current year');
-            // }
+            //should be replaced by current date
+            if(productionYear>=2024){
+                alert('Tahun pembuatan tidak boleh lebih dari current year');
+            }
             
             // Collect form data
             const kendaraanData = {
