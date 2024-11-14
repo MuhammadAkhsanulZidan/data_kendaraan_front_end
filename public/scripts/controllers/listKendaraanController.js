@@ -52,23 +52,42 @@ class HomeController {
         this.tableBody.empty();  // Clear existing rows
 
         kendaraanList.forEach((kendaraan, index) => {
+            // Determine the row background color based on color_id
+            let rowColorClass = '';
+            switch (kendaraan.color_id) {
+                case 'merah':
+                    rowColorClass = 'bg-danger';  // Red
+                    break;
+                case 'hitam':
+                    rowColorClass = 'bg-dark';    // Black
+                    break;
+                case 'biru':
+                    rowColorClass = 'bg-primary'; // Blue
+                    break;
+                case 'abu-abu':
+                    rowColorClass = 'bg-secondary'; // Gray
+                    break;
+                default:
+                    rowColorClass = '';  // Default background
+            }
+
             const row = `
-                <tr>
-                    <td>${index + 1}</td>
-                    <td>${kendaraan.registration_number}</td>
-                    <td>${kendaraan.owner_name}</td>
-                    <td>${kendaraan.brand}</td>
-                    <td>${kendaraan.production_year}</td>
-                    <td>${kendaraan.cilinder_capacity}</td>
-                    <td>${kendaraan.color_id}</td>
-                    <td>${kendaraan.fuel}</td>
-                    <td>
-                        <button class="btn btn-warning btn-sm detail-button" data-id="${kendaraan.registration_number}">Detail</button>
-                        <button class="btn  btn-info  btn-sm edit-button" data-id="${kendaraan.registration_number}">Edit</button>
-                        <button class="btn btn-danger btn-sm delete-button" data-id="${kendaraan.registration_number}">Delete</button>
-                    </td>
-                </tr>
-            `;
+            <tr class="${rowColorClass}">
+                <td>${index + 1}</td>
+                <td>${kendaraan.registration_number}</td>
+                <td>${kendaraan.owner_name}</td>
+                <td>${kendaraan.brand}</td>
+                <td>${kendaraan.production_year}</td>
+                <td>${kendaraan.cilinder_capacity}</td>
+                <td>${kendaraan.color_id}</td>
+                <td>${kendaraan.fuel}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm detail-button" data-id="${kendaraan.registration_number}">Detail</button>
+                    <button class="btn btn-info btn-sm edit-button" data-id="${kendaraan.registration_number}">Edit</button>
+                    <button class="btn btn-danger btn-sm delete-button" data-id="${kendaraan.registration_number}">Delete</button>
+                </td>
+            </tr>
+        `;
 
             this.tableBody.append(row);
         });
@@ -94,10 +113,10 @@ class HomeController {
                 });
                 modal.hide();
                 $('#infoDialogMessage').text(message);
-                    const infoModal = new bootstrap.Modal(document.getElementById('infoDialog'));
-                    infoModal.show();
+                const infoModal = new bootstrap.Modal(document.getElementById('infoDialog'));
+                infoModal.show();
             });
-            
+
 
             $('.btn-secondary').off('click').on('click', function () {
                 modal.hide();
