@@ -6,14 +6,13 @@ class KendaraanService {
             method: 'GET',
             data: filters,
             success: function (response) {
-                if (response.response_status !== "200 OK") {
-                    alert(response.response_message);
-                    return;
-                }
                 callback(response.response_data);
             },
             error: function (xhr, status, error) {
-                console.log('Error fetching data:', error);
+            const responseMessage = xhr.responseJSON ? xhr.responseJSON.response_message : 'An error occurred';
+            console.log('Error adding data:', responseMessage);
+
+            alert(responseMessage);
             }
         });
     }
@@ -26,7 +25,9 @@ class KendaraanService {
                 callback(response.response_data);
             },
             error: (xhr, status, error) => {
-                console.log('Error fetching data:', error);
+                const responseMessage = xhr.responseJSON ? xhr.responseJSON.response_message : 'An error occurred';
+                console.log('Error adding data:', responseMessage);
+                alert(responseMessage);
             }
         });
     }
@@ -41,7 +42,9 @@ class KendaraanService {
                 callback(response);
             },
             error: (xhr, status, error) => {
-                console.log('Error adding data:', error);
+                const responseMessage = xhr.responseJSON ? xhr.responseJSON.response_message : 'An error occurred';
+                console.log('Error adding data:', responseMessage);
+                alert(responseMessage);
             }
         });
     }
@@ -56,7 +59,13 @@ class KendaraanService {
                 callback(response);
             },
             error: (xhr, status, error) => {
-                console.log('Error updating data:', error);
+                // Parse the response to get the message
+                const responseMessage = xhr.responseJSON ? xhr.responseJSON.response_message : 'An error occurred';
+                // Log the error message
+                console.log('Error editing data:', responseMessage);
+
+                // Optionally, show it in an alert or on the page
+                alert(responseMessage);
             }
         });
     }
@@ -69,7 +78,13 @@ class KendaraanService {
                 callback(response);
             },
             error: (xhr, status, error) => {
-                console.log('Error deleting data:', error);
+                // Parse the response to get the message
+                const responseMessage = xhr.responseJSON ? xhr.responseJSON.response_message : 'An error occurred';
+                // Log the error message
+                console.log('Error deleting data:', responseMessage);
+
+                // Optionally, show it in an alert or on the page
+                alert(responseMessage);
             }
         });
     }
