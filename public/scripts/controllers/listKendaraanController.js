@@ -56,16 +56,16 @@ class HomeController {
             let rowColorClass = '';
             switch (kendaraan.color_id.toLowerCase()) {
                 case 'merah':
-                    rowColorClass = 'bg-danger';  // Red
+                    rowColorClass = 'bg-danger text-white';  // Red
                     break;
                 case 'hitam':
-                    rowColorClass = 'bg-dark';    // Black
+                    rowColorClass = 'bg-dark text-white';    // Black
                     break;
                 case 'biru':
-                    rowColorClass = 'bg-primary'; // Blue
+                    rowColorClass = 'bg-primary text-white'; // Blue
                     break;
                 case 'abu-abu':
-                    rowColorClass = 'bg-secondary'; // Gray
+                    rowColorClass = 'bg-secondary text-white'; // Gray
                     break;
                 default:
                     rowColorClass = '';  // Default background
