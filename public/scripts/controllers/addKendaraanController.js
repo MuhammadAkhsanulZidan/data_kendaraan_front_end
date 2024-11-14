@@ -6,8 +6,9 @@ class AddKendaraanController {
 
     initialize() {
         this.form.on('submit', (event) => {
-            // currentDate = new Date.now().toString;
+            currentDate = new Date();
             console.log(currentDate);
+            currentYear = currentDate.getFullYear();
             event.preventDefault();
             
             // Get the production year value
@@ -20,7 +21,8 @@ class AddKendaraanController {
             }
 
             //should be replaced by current date
-            if(productionYear>2024){
+            // Date.now.arguments.
+            if(productionYear>currentYear){
                 alert('Tahun pembuatan tidak boleh lebih dari current year');
                 return;
             }
