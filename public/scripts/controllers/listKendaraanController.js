@@ -85,14 +85,24 @@ class HomeController {
 
         $('.delete-button').on('click', (event) => {
             const id = $(event.currentTarget).data('id');
-            // Confirm deletion
-            if (confirm("Are you sure you want to delete this kendaraan?")) {
-                KendaraanService.deleteKendaraan(id, (response) => {
-                    alert("Berhasil dihapus");
-                    // Optionally, refresh the page or remove the deleted row from the table
-                    location.reload(); // or use a function to remove the row dynamically
+            const modal = new bootstrap.Modal(document.getElementById('customDialog'));
+            modal.show();
+
+            $('#confirmDelete').off('click').on('click', function () {
+                KendaraanService.deleteKendaraan(id, function (response) {
+                    location.reload();
                 });
-            }
+                modal.hide();
+                $('#infoDialogMessage').text(message);
+                    const infoModal = new bootstrap.Modal(document.getElementById('infoDialog'));
+                    infoModal.show();
+            });
+            
+
+            $('.btn-secondary').off('click').on('click', function () {
+                modal.hide();
+            });
+
         });
     }
 }
