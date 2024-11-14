@@ -54,7 +54,7 @@ class HomeController {
         kendaraanList.forEach((kendaraan, index) => {
             // Determine the row background color based on color_id
             let rowColorClass = '';
-            switch (kendaraan.color_id) {
+            switch (kendaraan.color_id.toLowerCase()) {
                 case 'merah':
                     rowColorClass = 'bg-danger';  // Red
                     break;
